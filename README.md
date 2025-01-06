@@ -33,3 +33,7 @@ bun dev
 
 The app will be available at `http://localhost:3000`
 
+
+## Caveats
+
+- [ ] Form inputs resetafter submission in Next.js 15 when using server actions [#72949]((https://github.com/vercel/next.js/issues/72949))

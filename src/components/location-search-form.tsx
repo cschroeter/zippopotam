@@ -8,7 +8,6 @@ import { CountrySelect } from './country-select'
 import { LocationSearchResultDialog } from './location-search-result-dialog'
 import { SubmitButton } from './submit-button'
 
-// TODO In Next.js 15 form values always resets 🤷‍♂️ https://github.com/vercel/next.js/issues/72949
 export const LocationSearchForm = () => {
   const [open, setOpen] = useState(false)
   const [state, formAction] = useActionState(searchLocation, {})
