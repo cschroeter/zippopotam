@@ -33,4 +33,15 @@ describe('Page', () => {
       expect(screen.getByText('Landau in der Pfalz, RP')).toBeInTheDocument()
     })
   })
+
+  it('should display a message when no location is found', async () => {
+    render(<Page />)
+
+    await user.type(screen.getByPlaceholderText('Enter zip'), '00000')
+    await user.click(screen.getByRole('button', { name: 'Search' }))
+
+    await waitFor(() => {
+      expect(screen.getByText('Nothing found for 00000')).toBeInTheDocument()
+    })
+  })
 })

@@ -48,4 +48,8 @@ export const handlers = [
       ],
     })
   }),
+
+  http.get('https://api.zippopotam.us/us/00000', () => {
+    return HttpResponse.json({})
+  }),
 ]
