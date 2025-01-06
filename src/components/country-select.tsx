@@ -1,8 +1,9 @@
-import { type SelectRootProps, createListCollection } from '@chakra-ui/react'
+import { type SelectRootProps, VisuallyHidden, createListCollection } from '@chakra-ui/react'
 import type { JSX } from 'react'
 import {
   SelectContent,
   SelectItem,
+  SelectLabel,
   SelectRoot,
   SelectTrigger,
   SelectValueText,
@@ -21,6 +22,9 @@ const countries = createListCollection({
 export const CountrySelect = (props: Omit<SelectRootProps, 'collection'>) => {
   return (
     <SelectRoot collection={countries} {...props}>
+      <VisuallyHidden>
+        <SelectLabel>Select a country</SelectLabel>
+      </VisuallyHidden>
       <SelectTrigger>
         <SelectValueItem />
       </SelectTrigger>
