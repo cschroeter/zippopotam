@@ -4,7 +4,7 @@ import { PageHeader } from '~/components/page-header'
 
 export default function Page() {
   return (
-    <Stack gap={{ base: '16', md: '24' }} alignItems="center" justifyContent="space-between">
+    <Stack gap={{ base: '16', md: '24' }} alignItems="center">
       <PageHeader
         tagline="Zippopotam"
         headline="Location Lookup"

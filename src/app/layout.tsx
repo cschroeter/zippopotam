@@ -5,7 +5,6 @@ import type { PropsWithChildren } from 'react'
 import { Navbar } from '~/components/navbar'
 import { Provider } from '~/components/ui/provider'
 import { Toaster } from '~/components/ui/toaster'
-import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Zippopotam',

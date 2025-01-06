@@ -24,8 +24,7 @@ export const searchLocation = async (_: FormState, formData: FormData): Promise<
         findLocation(input).pipe(
           Effect.map((location) => ({ status: 'success', location })),
           Effect.catchTags({
-            ParseError: () =>
-              Effect.succeed({ status: 'info', message: `Nothing found for ${input.zip}` }),
+            ParseError: () => Effect.succeed({ status: 'info', message: 'Invalid postal code' }),
             TimeoutException: () => Effect.succeed({ status: 'error', message: 'Timeout' }),
           }),
           Effect.catchAll(() => Effect.succeed({ status: 'error', message: 'Server Error' })),
